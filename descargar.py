@@ -7,3 +7,13 @@ def bajar(laDir):
 
 pagina= bajar("https://lezamapc.com.ar/36-monitores")
 print(pagina.prettify())
+
+
+
+
+
+
+
+
+
+
