@@ -42,6 +42,10 @@ def obtener_productos_electropc (url):
     pass
 
 
+def buscar_productos (nombre):
+    pass
+
+lista =  []
 
 # Variable para controlar la paginación
 for clave, valor in biblioteca.items():
@@ -50,6 +54,7 @@ for clave, valor in biblioteca.items():
     contador = 0
 
     while True:
+
     # Construir la URL de la página actual
         url = f'{url_lemac}/{valor}?page={numero_pagina}'
     
@@ -70,7 +75,8 @@ for clave, valor in biblioteca.items():
                 # Buscar todos los productos en la página
                 for producto in sopa.find_all('div', class_='product-description'):
                     productos_encontrados = True  # Se encontraron productos
-
+                    #if buscado in producto:
+                        #listaEncontrado = lista.append(producto)
                     # Extraer el título del producto
                     elemento_titulo = producto.find('h2', class_='h3 product-title')
                     titulo = elemento_titulo.text.strip() if elemento_titulo else 'Sin título'
